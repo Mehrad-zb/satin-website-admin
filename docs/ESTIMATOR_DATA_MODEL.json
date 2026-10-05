@@ -1,0 +1,20 @@
+{
+  "estimators": {
+    "wallpaper": {
+      "inputs": ["width","height","unit","wall_count","material","installation","removal","surface_type","design_service","artwork","wall_photo"],
+      "formula": "total_sqft = sum(convert_to_sqft(width * height) for each wall); price = total_sqft * material_rate + installation + removal + design"
+    },
+    "window_graphics": {
+      "inputs": ["width","height","unit","panel_count","material","installation","removal","design_service","artwork","window_photo"],
+      "formula": "total_sqft = sum(convert_to_sqft(width * height) for each panel); price = total_sqft * material_rate + installation + removal + design"
+    },
+    "vehicle_wrap": {
+      "inputs": ["vehicle_type","year","make","model","trim","coverage","roof","material","finish","design_service","removal","quantity"],
+      "pricing_note": "Pricing must be editable from admin/backend."
+    },
+    "apparel": {
+      "inputs": ["product","color","size_quantities","artwork","print_locations","print_method","artwork_dimensions"],
+      "preview": "Interactive mockup with front/back minimum."
+    }
+  }
+}
